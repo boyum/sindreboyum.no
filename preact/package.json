@@ -15,5 +15,8 @@
   "license": "ISC",
   "eslintConfig": {
     "extends": "eslint-config-synacor"
+  },
+  "devDependencies": {
+    "if-env": "^1.0.0"
   }
 }
