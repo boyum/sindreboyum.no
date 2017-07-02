@@ -1,0 +1,19 @@
+
+$min-content-width: 320px;
+$break-xsmall: 480px;
+$break-small: 640px;
+$break-medium: 800px;
+$break-large: 960px;
+$break-xlarge: 1024px;
+$max-content-width: 1140px;
+
+$mod_1: 1.2; // mobile
+$mod_2: 1.5; // desktop
+$min_font: 16px;
+$max_font: 24px;
+
+$heading-color: #FFF;
+$theme-color: #673AB7;
+$background-image: linear-gradient(to bottom right, $theme-color, purple);
+
+$base-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';

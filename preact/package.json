@@ -17,6 +17,12 @@
     "extends": "eslint-config-synacor"
   },
   "devDependencies": {
-    "if-env": "^1.0.0"
+    "if-env": "^1.0.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6"
+  },
+  "dependencies": {
+    "inert-polyfill": "^0.2.3",
+    "react-icons": "^2.2.5"
   }
 }

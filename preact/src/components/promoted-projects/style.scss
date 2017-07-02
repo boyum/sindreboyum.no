@@ -1,0 +1,29 @@
+@import '../../style/helpers';
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 95%;
+    width: $max-content-width;
+}
+
+.project {
+    width: 100%;
+    @include respond-to(small) {
+        width: 48%;
+    }
+
+    @include respond-to(xlarge) {
+        width: 31%;
+    }
+}
+
+.image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .8;
+    padding-top: 100%;
+    width: 100%;
+}

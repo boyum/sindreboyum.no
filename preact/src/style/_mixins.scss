@@ -1,0 +1,107 @@
+@mixin visually-hidden() {
+  border: 0; 
+  clip: rect(0 0 0 0); 
+  height: 1px; 
+  margin: -1px; 
+  overflow: hidden; 
+  padding: 0; 
+  position: absolute; 
+  width: 1px;
+}
+
+@mixin respond-to($media) {
+    @if $media == xsmall-only {
+        @media only screen and (max-width: $break-xsmall) {
+            @content;
+        }
+    }
+    @else if $media == small {
+        @media only screen and (min-width: $break-xsmall + 1) {
+            @content;
+        }
+    }
+    @else if $media == small-only {
+        @media only screen and (min-width: $break-xsmall + 1) and (max-width: $break-small) {
+            @content;
+        }
+    }
+    @else if $media == small-down {
+        @media only screen and (max-width: $break-small) {
+            @content;
+        }
+    }
+    @else if $media == medium {
+        @media only screen and (min-width: $break-small + 1) {
+            @content;
+        }
+    }
+    @else if $media == medium-only {
+        @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium) {
+            @content;
+        }
+    }
+    @else if $media == medium-down {
+        @media only screen and (max-width: $break-medium) {
+            @content;
+        }
+    }
+    @else if $media == large {
+        @media only screen and (min-width: $break-medium + 1) {
+            @content;
+        }
+    }
+    @else if $media == large-only {
+        @media only screen and (min-width: $break-medium + 1) and (max-width: $break-large) {
+            @content;
+        }
+    }
+    @else if $media == large-down {
+        @media only screen and (max-width: $break-large) {
+            @content;
+        }
+    }
+    @else if $media == xlarge {
+        @media only screen and (min-width: $break-large + 1) {
+            @content;
+        }
+    }
+    @else if $media == xlarge-down {
+        @media only screen and (max-width: $break-xlarge) {
+            @content;
+        }
+    }
+    @else if $media == above-maxwidth {
+        @media only screen and (min-width: $max-content-width + 32px + 1) {
+            @content;
+        }
+    }
+    @else if $media == print {
+        @media only print {
+            @content;
+        }
+    }
+}
+
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}

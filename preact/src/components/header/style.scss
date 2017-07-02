@@ -1,0 +1,131 @@
+@import '../../style/helpers';
+.header {
+	background-color: rgba($theme-color, .3);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	height: 3rem;
+	left: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 50;
+	h1 {
+		color: #FFF;
+		float: left;
+		font-size: 1.5em;
+		font-weight: 100;
+		line-height: 3rem;
+		margin: 0;
+		padding: 0 1rem;
+	}
+	.nav_toggle {
+		background-color: transparent;
+		border: 0;
+		color: #FFF;
+		cursor: pointer;
+		display: block;
+		float: right;
+		height: 3rem;
+		line-height: 3rem;
+		margin-right: 1rem;
+		min-width: 50px;
+		position: relative;
+		transition: background-color .15s ease-in-out, color .15s ease-in-out;
+		&::after {
+			background-image: linear-gradient(to bottom, #FFF 20%, transparent 20.1%);
+			background-size: 100% 40%;
+			content: '';
+			height: 40%;
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 40%;
+		}
+		&:hover,
+		&:active {
+			// background-color: rgba(255, 255, 255, .8);
+			// color: $theme-color;
+			&::after {
+				// background-image: linear-gradient(to bottom, $theme-color 20%, transparent 20.1%);
+			}
+		}
+		@include respond-to(small) {
+			display: none;
+		}
+	}
+	.nav_open {
+		@include respond-to(xsmall-only) {
+			background-color: #FFF;
+			opacity: 1!important;
+			pointer-events: auto;
+		}
+	}
+	nav {
+		background-color: #FFF;
+		box-shadow: 0 1px 4px rgba(0,0,0, .3);
+		float: right;
+		opacity: 0;
+		pointer-events: none;
+		position: absolute;
+		right: 1rem;
+		top: 3rem;
+		transition: opacity .25s ease-in-out;
+		ul {
+			@extend %clearfix;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			@include respond-to(small) {
+				float: left;
+			}
+		}
+		a {
+			color: $theme-color;
+			display: inline-block;
+			height: 3rem;
+			line-height: 3rem;
+			min-width: 100px;
+			padding: 0 1rem;
+			text-align: right;
+			text-decoration: none;
+			transition: background-color .15s ease-in-out, color .15s ease-in-out;
+			will-change: background-color;
+			width: 100%;
+
+
+			&:hover,
+			&:active {
+				background-color: rgba($theme-color, .05);
+			}
+			&.active {
+				background-color: rgba($theme-color, .1);				
+			}
+		}
+		@include respond-to(small) {
+			background-color: transparent;
+			box-shadow: 0; 
+			min-width: 50px;
+			opacity: 1;
+			pointer-events: auto;
+			position: static;
+
+			a {
+				color: #EEE;
+				text-align: center;
+
+				&:hover,
+				&:active {
+					background-color: rgba(255, 255, 255, .7);
+					color: $theme-color;
+				}
+				&.active {
+					background-color: rgba(#FFF, .8);
+					color: $theme-color;
+				}
+			}
+		}
+	}
+}

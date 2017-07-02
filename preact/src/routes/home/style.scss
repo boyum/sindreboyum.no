@@ -1,0 +1,69 @@
+@import '../../style/helpers';
+.home {
+	color: #FFF;
+	min-height: 100%;
+	padding: 56px 20px;
+	width: 100%;
+}
+
+.heading {
+	@extend %heading;
+	animation: fadeInFloatUp .4s ease-in-out;
+	margin-top: 3rem;
+}
+
+.description {
+	animation: fadeInFloatUp .4s ease-in-out;
+	font-size: 1.2em;
+	font-weight: 100;
+	text-align: center;
+}
+
+.links {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	list-style: none;
+	margin: 2rem 0;
+	padding: 0;
+	li {
+		margin-top: 1rem;
+	}
+	svg {
+		height: 1.5em;
+		margin-right: .5em;
+		vertical-align: middle;
+		width: 1.5em;
+	}
+	a {
+		border-bottom: 1px solid transparent;
+		color: #FFF;
+		text-decoration: none;
+		transition: .1s border-bottom-color ease-in-out;
+		&:hover,
+		&:focus {
+			border-bottom-color: currentColor;
+		}
+	}
+	@include respond-to(small) {
+		flex-direction: row;
+		li {
+			margin-top: 0;
+			+li {
+				margin-left: 1rem;
+			}
+		}
+	}
+}
+
+@keyframes fadeInFloatUp {
+	0% {
+		opacity: .5;
+		transform: translateY(.2em);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
