@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "inert-polyfill": "^0.2.3",
-    "react-icons": "^2.2.5"
+    "react-icons": "^2.2.5",
+    "styled-components": "^2.1.0"
   }
 }
