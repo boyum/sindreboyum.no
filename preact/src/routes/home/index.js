@@ -4,6 +4,7 @@ import PromotedProjects from '../../components/promoted-projects';
 import FaGithub from 'react-icons/fa/github';
 import FaTwitter from 'react-icons/fa/twitter';
 import FaCodepen from 'react-icons/fa/codepen';
+import AsyncImage from '../../components/async-image';
 
 export default class Home extends Component {
 	constructor() {
@@ -13,7 +14,8 @@ export default class Home extends Component {
 	render() {
 		return (
 			<div class={style.home}>
-				<h1 class={style.heading}>Hi! I'm Sindre</h1>
+				<AsyncImage class={style.image} large="/assets/sindre_300.jpg" placeholder="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAUEBAQEAwUEBAQGBQUGCA0ICAcHCBALDAkNExAUExIQEhIUFx0ZFBYcFhISGiMaHB4fISEhFBkkJyQgJh0gISD/wAALCAAQABABAREA/8QAFgABAQEAAAAAAAAAAAAAAAAABQcI/8QAJxAAAgEDAgUEAwAAAAAAAAAAAQIEAwURBiEABxIxUQgTIjJBQoH/2gAIAQEAAD8A0JqN7nF03LrWdqSTvitJ6yl0p5YAuVH2wCTj88G6SN6kWVhfLlTuUhHGJNOMY/UCM4K9tttx58jiV8xPURbrHqivpO22ORcItCoaFwmq/Sy9wRRHYspxuSBsQPPC/K7m5pzUF8bR8CLPR3R5EeXKUL7+ACyFf1IGSMZBwf7/AP/Z" />
+				<h1 class={style.heading}>I'm Sindre!</h1>
 
 				<div class={style.description}>
 					I like JS and web tinkering!

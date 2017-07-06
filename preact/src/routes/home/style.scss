@@ -6,14 +6,27 @@
 	width: 100%;
 }
 
+.image {
+	background-position: 50% 20%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 50%;
+	box-shadow: 0 4px 16px rgba(0,0, 0, .15);
+	height: 300px;
+	margin: 2rem auto;
+	opacity: .9;
+	width: 300px;
+}
+
 .heading {
 	@extend %heading;
 	animation: fadeInFloatUp .4s ease-in-out;
-	margin-top: 3rem;
+	margin-top: 1rem;
 }
 
 .description {
 	animation: fadeInFloatUp .4s ease-in-out;
+	// animation-delay: .2s;
 	font-size: 1.2em;
 	font-weight: 100;
 	text-align: center;
