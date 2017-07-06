@@ -92,7 +92,6 @@
 			text-align: right;
 			text-decoration: none;
 			transition: background-color .15s ease-in-out, color .15s ease-in-out;
-			will-change: background-color;
 			width: 100%;
 
 
@@ -122,8 +121,11 @@
 					color: $theme-color;
 				}
 				&.active {
-					background-color: rgba(#FFF, .8);
+
+					// background-image: linear-gradient(to bottom right, $theme-color, purple);
+					background-color: rgba(#FFF, .75);
 					color: $theme-color;
+					// color: #FFF !important;
 				}
 			}
 		}
