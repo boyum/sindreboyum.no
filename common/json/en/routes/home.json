@@ -1,0 +1,17 @@
+{
+  "title": "Hi! I'm Sindre",
+  "subTitle": "I like JS and web tinkering!",
+  "socialMedia": [{
+    "title": "@boyum",
+    "href": "https://github.com/boyum",
+    "medium": "GitHub"
+  }, {
+    "title": "@sindreboyum",
+    "href": "https://twitter.com/sindreboyum",
+    "medium": "Twitter"
+  }, {
+    "title": "@sindre",
+    "href": "https://codepen.io/sindre",
+    "medium": "CodePen"
+  }]
+}
