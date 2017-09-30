@@ -1,0 +1,20 @@
+{
+  "navbar": {
+    "logo": {
+      "src": "",
+      "alt": "Sindre Bøyum"
+    },
+    "links": [{
+        "title": "Home",
+        "url": "/"
+      }, {
+        "title": "Me",
+        "url": "/me"
+      },
+      {
+        "title": "Portfolio",
+        "url": "/portfolio"
+      }
+    ]
+  }
+}
